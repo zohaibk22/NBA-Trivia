@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useParams } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Game.css";
 
 const Game = () => {
@@ -8,7 +9,8 @@ const Game = () => {
   const [PlayerOneMetrics, setPlayerOneMetrics] = useState([]);
   const [PlayerTwoMetrics, setPlayerTwoMetrics] = useState([]);
   const [score, setScore] = useState(0);
-  const [playerGif, setPlayerGif] = useState("");
+  const [playerOneGif, setPlayerOneGif] = useState("");
+  const [playerTwoGif, setPlayerTwoGif] = useState("");
   const [count, setCounter] = useState(1);
   const params = useParams;
 
@@ -35,9 +37,12 @@ const Game = () => {
 
     const gifData = await axios.get(
       `https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=${
-        playerOneFirstName + playerTwoStatsInfo
+        playerOneFirstName + playerOneLastName
       }&limit=25&offset=0&rating=G&lang=en`
     );
+    console.log(gifData.data.data[0].url);
+
+    setPlayerOneGif(gifData.data.data[0].url);
   };
 
   const apiCallStatsPlayerTwo = async () => {
@@ -58,6 +63,15 @@ const Game = () => {
     setPlayerTwoMetrics(playerTwoFirstName + " " + playerTwoLastName);
 
     console.log(playerTwoFirstName + " " + playerTwoLastName);
+
+    const gifData = await axios.get(
+      `https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=${
+        playerTwoFirstName + playerTwoLastName
+      }&limit=25&offset=0&rating=G&lang=en`
+    );
+    console.log(gifData.data.data[0].url);
+
+    setPlayerTwoGif(gifData.data.data[0].url);
   };
 
   const isEmpty = () => {
@@ -77,9 +91,11 @@ const Game = () => {
       <>
         <div className="left-card">
           <h1>{PlayerOneMetrics}</h1>
+          <img src={playerOneGif}></img>
         </div>
         <div className="right-card">
           <h1>{PlayerTwoMetrics}</h1>
+          <img src={playerTwoGif} sameSite="none" />
         </div>
 
         <button
@@ -101,6 +117,9 @@ const Game = () => {
   return (
     <>
       <h1> Game Over</h1>
+      <p>
+        <Link to="/Results">See Results</Link>
+      </p>
     </>
   );
 };

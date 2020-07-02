@@ -4,6 +4,7 @@ import Header from "./Header";
 import Home from "./Home";
 import GameMenu from "./GameMenu";
 import Game from "./Game";
+import Results from "./Results";
 
 import axios from "axios";
 
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/Game">
           <Game />
+        </Route>
+        <Route path="/Results">
+          <Results />
         </Route>
       </main>
     </>
