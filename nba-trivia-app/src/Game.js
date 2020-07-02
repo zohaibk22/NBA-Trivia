@@ -7,7 +7,9 @@ const Game = () => {
   const [playerTwoStatsInfo, setPlayerTwoStatsInfo] = useState([]);
   const [PlayerOneMetrics, setPlayerOneMetrics] = useState([]);
   const [PlayerTwoMetrics, setPlayerTwoMetrics] = useState([]);
+  const [score, setScore] = useState(0);
   const [playerGif, setPlayerGif] = useState("");
+  const [count, setCounter] = useState(1);
   const params = useParams;
 
   const apiCallStatsPlayerOne = async () => {
@@ -16,6 +18,8 @@ const Game = () => {
       `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${randomNum}`
     );
     console.log(dataStats.data.data[0].pts);
+    let temp = dataStats.data.data[0].pts;
+    while (temp === null) {}
     setPlayerOneStatsInfo(dataStats.data.data[0].pts);
 
     const dataGeneralInfo = await axios.get(
@@ -28,6 +32,12 @@ const Game = () => {
     setPlayerOneMetrics(playerOneFirstName + " " + playerOneLastName);
 
     console.log(playerOneFirstName + " " + playerOneLastName);
+
+    const gifData = await axios.get(
+      `https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=${
+        playerOneFirstName + playerTwoStatsInfo
+      }&limit=25&offset=0&rating=G&lang=en`
+    );
   };
 
   const apiCallStatsPlayerTwo = async () => {
@@ -50,31 +60,47 @@ const Game = () => {
     console.log(playerTwoFirstName + " " + playerTwoLastName);
   };
 
-  const apiCallGifs = async () => {
-    const data = await axios.get(
-      "https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=lebron&limit=25&offset=0&rating=G&lang=en"
-    );
-
-    console.log(data);
+  const isEmpty = () => {
+    do {
+      apiCallStatsPlayerOne();
+      apiCallStatsPlayerTwo();
+    } while (setPlayerOneStatsInfo === false || setPlayerTwoStatsInfo === null);
   };
 
   useEffect(() => {
     apiCallStatsPlayerOne();
     apiCallStatsPlayerTwo();
-    apiCallGifs();
   }, []);
 
+  while (count <= 10) {
+    return (
+      <>
+        <div className="left-card">
+          <h1>{PlayerOneMetrics}</h1>
+        </div>
+        <div className="right-card">
+          <h1>{PlayerTwoMetrics}</h1>
+        </div>
+
+        <button
+          onClick={() => {
+            // isEmpty();
+            setCounter(count + 1);
+          }}
+        >
+          Submit Answer
+        </button>
+
+        <div>
+          <p>{count}</p>
+        </div>
+        <button>Next Question</button>
+      </>
+    );
+  }
   return (
     <>
-      <div className="left-card">
-        <h1>{PlayerOneMetrics}</h1>
-      </div>
-      <div className="right-card">
-        <h1>{PlayerTwoMetrics}</h1>
-      </div>
-
-      <button>Submit Answer</button>
-      <button>Next Question</button>
+      <h1> Game Over</h1>
     </>
   );
 };
