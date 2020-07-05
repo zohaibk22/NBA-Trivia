@@ -1,0 +1,10 @@
+header{
+    height: 5vh;
+    width: 100vw;
+    background-color: gray;
+    margin: 0px 0px;
+}
+
+.header-heading {
+    margin:0px;
+}
