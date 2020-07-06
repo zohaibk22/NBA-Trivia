@@ -1,0 +1,35 @@
+footer {
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  background-color: #f79071;
+  bottom: 0px;
+  font-family: 'Nanum Myeongjo', serif;
+  color: #0779e4
+}
+
+.footer-img {
+  position: relative;
+  height: 3.5vh;
+  margin-top: 1vh;
+  margin-left: 5%;
+  left: 40vw;
+  border-radius: 10px;
+}
+
+.name-symbol {
+position: relative;
+bottom: 2.2vw;
+left: 2vw;
+}
+
+.margin-right{
+    margin-right: 1vw;
+}
+
+.api-symbol {
+    position: relative;
+    bottom:7.5vh;
+    left: 75vw;
+
+}

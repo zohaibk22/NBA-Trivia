@@ -5,14 +5,26 @@ import "./Header.css";
 function Header() {
   return (
     <header>
-      <h1 className="header-heading">NBA Trivia</h1>
+      <img
+        src="https://wallpaperplay.com/walls/full/7/f/8/109614.jpg"
+        alt="nba-logo"
+        className="logo"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet"
+      ></link>
 
-      <ui>
-        <li>
-          <Link to="/">Home</Link>
+      <ui className="game-menu">
+        <li className="option-one">
+          <Link className="click-item" to="/">
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/Menu">Game Menu</Link>
+        <li className="option-two">
+          <Link className="click-item" to="/Menu">
+            Game Menu
+          </Link>
         </li>
       </ui>
     </header>

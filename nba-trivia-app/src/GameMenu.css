@@ -1,0 +1,55 @@
+
+.body-container{
+    background-color: #005082;
+}
+.main-menu{
+    margin:0;
+    position: relative;
+    font-size: 3vw;
+    top: 2vw;
+    text-align: center;
+    border: 10px solid red;
+    width: 30vw;
+    padding: .5vw;
+    background-color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    left: 35%;
+    border-radius:10px;
+}
+.menu-container{
+    
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly ;
+    text-align: center;
+    align-items: center;
+     
+}
+
+.option{
+    border: 5px solid black;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2vw;
+    width: 50vw;
+    font-family: 'Holtwood One SC', serif;
+    border-radius: 25px;
+     background-color: #fa163f;
+    opacity: .5;
+    transition: .5s;
+    box-shadow: 5px 5px black;
+
+}
+
+.option:hover{
+    opacity: 1;
+}
+
+.links{
+    color: lime;
+}
+
+a{
+    color:lime
+}

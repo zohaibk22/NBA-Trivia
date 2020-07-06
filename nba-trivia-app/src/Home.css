@@ -1,0 +1,141 @@
+.main-container{
+    background-color: #005082;
+    height: 87vh;
+}
+
+.nba-gif{
+    height: 20vh;
+    width: 20vw;
+    border-radius: 25px;
+    position: absolute;
+    border: 5px solid #05dfd7
+}
+.gif-one{
+    left: 1vh;
+    top:9vh;
+}
+.gif-two{
+    bottom: 6vh;
+    left: 1vh;
+}
+
+.gif-three{
+    top:9vh;
+    right: 1vh;
+}
+
+.gif-four{
+    bottom: 6vh;
+    right: 1vh;
+
+}
+
+
+
+.app-name{
+    position: relative;
+    margin: 0px;
+    font-size: 5vw;
+    font-family: 'Gravitas One', cursive;
+    width: 35vw;
+    color: #fa163f;
+    background-color: rgb(107, 107, 107);
+    border-radius: 50%;
+    text-align: center;
+    text-shadow: 5px 5px white;
+    box-shadow: 10px 10px #f79071;
+    animation-name: app-name;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    left: 30%;
+    top:1%;
+    
+}
+
+@keyframes app-name {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 50px); }
+    to   { transform: translate(0, -0px); }    
+
+}
+
+
+.enter{
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    height: 6vh;
+    width: 12vw;
+    font-size: 2vw;
+    border-radius: 20px;
+    background-color: #fa163f;
+    border: 5px solid black;
+    text-decoration: none;;
+    color: #9dd8c8;
+    font-family: 'Bangers', cursive;
+    opacity: .5;
+    transition: .5s;
+
+}
+
+.enter:hover {
+    opacity: 1;
+}
+
+.instructions {
+    position: absolute;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Kavoon', cursive;
+    color: #9dd8c8
+}
+
+.instruct-one{
+    top: 40%;
+    left: 30%;
+    
+
+}
+
+.instruct-two{
+    top: 50%;
+    left: 1vw;
+    
+}
+
+.instruct-three{
+    top:50%;
+    right:1%;
+}
+
+.instruct-four{
+    top:60%;
+    left:45%;
+}
+
+.court {
+    position: absolute;
+    height: .5vh;
+    width: 53vw;
+    background-color: #ffbd69;
+    top:93%;
+    left:23%;
+}
+
+.basketball {
+    height: 10vh;
+    position: absolute;
+    top: 83%;
+    left: 24%;
+    animation: basketball 2s infinite linear;
+}
+
+@keyframes basketball {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(359deg);}
+}
+
+/* Animation Idea was referenced from here: https://codepen.io/whusterj/pres/bdYKop */
+

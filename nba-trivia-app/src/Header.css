@@ -1,10 +1,58 @@
 header{
-    height: 5vh;
+    height: 8vh;
     width: 100vw;
-    background-color: gray;
+    background-color: #f79071;
     margin: 0px 0px;
+    color: #0779e4;
 }
 
 .header-heading {
     margin:0px;
+}
+
+.logo{
+    height: 6vh;
+    border-radius: 50%;
+    margin-left: 1vw;
+    margin-top: .3vw;
+    border: 5px solid white;
+}
+
+.game-menu {
+    position: absolute;
+    right: 4vw;
+    top: 1vw
+}
+
+.option-one {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    margin-right: 10vw;
+    text-decoration: none;
+    font-size: 2vw;
+    
+}
+.option-one:hover{
+    color: green;
+}
+
+.option-two {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    font-size: 2vw;
+    
+}
+
+.click-item{
+    text-decoration: none;
+    transition: 1s;
+}
+
+.click-item:hover{
+    color: #fa163f;
+}
+
+a{
+    text-decoration: none;
 }

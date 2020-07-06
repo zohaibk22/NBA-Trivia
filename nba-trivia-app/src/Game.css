@@ -1,24 +1,142 @@
 
-body{
-    background-color:yellow;
-    display:flex;
+.body-container{
+    background-color:#005082;
+    height: 87vh;
+}
+
+.cards{
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .right-card{
-    background-color: purple;
-    
+
 }
 
 .left-card{
-    background-color: blue;
+    background-color: #f4efd3;
+    
 }
 
+.both-div{
+    height: 60vh;
+    width: 60vh;
+    position: relative;
+    top: 6vh;
+    border-radius:20px;
+    box-shadow: 10px 10px black;
+    text-align: center;
+    transition: .6s;
+    background-color: #f4efd3;
+}
+
+.both-div:hover {
+    background-color: #f5dea3;
+
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    margin:0;
+    top: 3vh;
+    left: 30%;
+    font-size: 3vw;
+    background-color: white;
+    border: 10px solid red;
+    border-radius:10px;
+    width: 30vw;
+    padding: 2vw;
+    font-family: 'Pathway Gothic One', sans-serif;
+    
+
+
+}
+
+.question-btn {
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 44%;
+    height: 6vh;
+    width: 12vw;
+    border-radius: 25px;
+    font-size: 1.5vw;
+    background-color: #fa163f;
+    font-family: 'Bangers', cursive;
+    border: 5px solid black;
+    opacity: .5;
+    transition: .5s;
+}
+
+.question-btn:hover {
+    opacity: 1;
+}
+
+.gif {
+    position: relative;
+    top: 2vh;
+    height: 30vh;
+    width: 25vw;
+    border-radius: 25px;
+    border: 5px solid black
+
+    
+}
+
+.name {
+    position: relative;
+    color: #fa163f;
+    font-family: 'Sigmar One', cursive;
+    font-size: 2.5vw;
+    top: 2vw;
+}
+
+.question-number{
+    position: absolute;
+    left: 41.5%;
+    bottom: 50%;
+    font-size: 2vw;
+    font-family: 'Holtwood One SC', serif;
+    animation: color-shift 2s infinite
+}
+
+@keyframes color-shift {
+    0% {color:black}
+    50% {color: #fa163f}
+    100% {color: black}
+}
 .correct-answer {
-    border: 20px solid green;
+    border:15px solid green;
 }
 
 .incorrect-answer {
-    border: 20px solid red;
+    border: 15px solid red;
+}
+
+.stats{
+    display:none;
+    font-family: 'Sigmar One', cursive;
+}
+
+.bball {
+    height: 10vh;
+    position: absolute;
+    animation: basketball 2s infinite linear;
+}
+
+@keyframes basketball {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(359deg);}
+}
+
+.ball-one{
+    right: 1%;
+    top: 10%
+
+}
+
+.ball-two{
+    top: 10%;
 }

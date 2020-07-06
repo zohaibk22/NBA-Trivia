@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useParams } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./GameMenu.css";
 
 function GameMenu(props) {
   const [playerOneStatsInfo, setPlayerOneStatsInfo] = useState([]);
@@ -24,31 +25,40 @@ function GameMenu(props) {
 
   console.log(props.statType);
   return (
-    <>
-      {/* <h2>Game Menu Page</h2>
-      {props.statType.map((stat) => (
-        <div>
-          <h2>{stat.pts}</h2>
+    <div className="body-container">
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Bangers&family=Black+Han+Sans&family=Comic+Neue:wght@700&family=Gravitas+One&family=Holtwood+One+SC&family=Pathway+Gothic+One&family=Sigmar+One&display=swap');
+      </style>
+      <h1 className="main-menu">Main Menu</h1>
+      <div className="menu-container">
+        <div className="option">
+          <Link className="links" to={`/Game/pts`}>
+            Points Per Game Questionaire
+          </Link>
         </div>
-      ))} */}
-      <ul>
-        <li>
-          <Link to={`/Game/pts`}>Points Per Game Questionaire</Link>
-        </li>
-        <li>
-          <Link to={`/Game/ast`}>Assists Per Game Questionaire</Link>
-        </li>
-        <li>
-          <Link to={`/Game/reb`}>Rebounds Per Game Questionaire</Link>
-        </li>
-        <li>
-          <Link to={`/Game/stl`}>Steals Per Game Questionaire</Link>
-        </li>
-        <li>
-          <Link to={`/Game/blk`}>Blocks Per Game Questionaire</Link>
-        </li>
-      </ul>
-    </>
+        <div className="option">
+          <Link className="links" to={`/Game/ast`}>
+            Assists Per Game Questionaire
+          </Link>
+        </div>
+        <div className="option">
+          <Link className="links" to={`/Game/reb`}>
+            Rebounds Per Game Questionaire
+          </Link>
+        </div>
+        <div className="option">
+          <Link className="links" to={`/Game/stl`}>
+            Steals Per Game Questionaire
+          </Link>
+        </div>
+        <div className="option">
+          <Link className="links" to={`/Game/blk`}>
+            Blocks Per Game Questionaire
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
 
