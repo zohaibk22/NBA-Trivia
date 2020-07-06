@@ -10,10 +10,6 @@
     justify-content: space-around;
 }
 
-.right-card{
-
-}
-
 .left-card{
     background-color: #f4efd3;
     
@@ -68,6 +64,7 @@
     border: 5px solid black;
     opacity: .5;
     transition: .5s;
+    color: lime
 }
 
 .question-btn:hover {
@@ -95,9 +92,9 @@
 
 .question-number{
     position: absolute;
-    left: 41.5%;
+    left:44%;
     bottom: 50%;
-    font-size: 2vw;
+    font-size: 3vh;
     font-family: 'Holtwood One SC', serif;
     animation: color-shift 2s infinite
 }
@@ -139,4 +136,90 @@
 
 .ball-two{
     top: 10%;
+}
+
+@media only screen and (max-width: 375px){
+
+
+    .title{
+        width: 50vw;
+        font-size: 8vw;
+        left: 22%;
+
+    }
+
+    .ball-one{
+        display: none;
+
+    }
+    
+    .ball-two{
+        display: none;
+
+    }
+
+    .both-div{
+        height: 35vh;
+        
+    }
+
+    .question-btn{
+        top:82%;
+        height: 9vh;
+        width: 50vw;
+        font-size: 7vw;
+        left: 27%;
+    }
+
+    .question-number{
+        bottom: 20%;
+        font-size: 2vh;
+        width: 80vw;
+        left: 20%
+    }
+
+    .name{
+        font-size: 7vw;
+
+    }
+
+    .stats{
+        position: relative;
+        top: 2vw;
+    }
+    .gif{
+        height: 15vh;
+
+    }
+
+}
+
+
+@media only screen and (min-width: 376px) and (max-width: 768px){
+    .title{
+        width: 60vw;
+        font-size:8vw;
+        top: 5vw;
+        left: 17%
+    }
+
+    .both-div{
+        height: 50vh;
+        width: 40vw;
+        
+    }
+
+     .question-btn{
+        top:87%;
+        height: 7vh;
+        width: 40vw;
+        font-size: 7vw;
+        left: 30%;
+    }
+
+    .question-number{
+        bottom: 12%;
+        width: 80vw;
+        left: 33%
+    }
 }

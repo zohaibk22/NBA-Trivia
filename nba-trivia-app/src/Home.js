@@ -11,7 +11,7 @@ function Home() {
     <div className="main-container">
       <style>
         @import
-        url('https://fonts.googleapis.com/css2?family=Bangers&family=Black+Han+Sans&family=Comic+Neue:wght@700&family=Gravitas+One&display=swap');
+        url('https://fonts.googleapis.com/css2?family=Bangers&family=Black+Han+Sans&family=Chakra+Petch:wght@500&family=Comic+Neue:wght@700&family=Gravitas+One&family=Holtwood+One+SC&family=Pathway+Gothic+One&family=Sigmar+One&display=swap');
       </style>
       <h1 className="app-name">NBA Trivia</h1>
 

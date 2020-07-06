@@ -1,0 +1,144 @@
+.heading{
+    margin: 0px ;
+    position: relative;
+    font-size: 3vw;
+    top: 1vw;
+    text-align: center;
+    border: 10px solid red;
+    width: 30vw;
+    padding: .5vw;
+    background-color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    left: 35%;
+    border-radius:10px;
+
+}
+
+.return-btn{
+    position: absolute;
+    top: 85%;
+    left: 43%;
+    height: 6vh;
+    width: 12vw;
+    font-size: 2vw;
+    border-radius: 20px;
+    background-color: #fa163f;
+    border: 5px solid black;
+    text-decoration: none;;
+    color: lime;
+    font-family: 'Bangers', cursive;
+    opacity: .5;
+    transition: .5s;
+
+}
+
+.return-btn:hover {
+    opacity: 1;
+}
+
+.score{
+    position: relative;
+    border: 5px solid #f79071;
+    padding: 4vw;
+    width: 40vw;
+    bottom: 2vw;
+    left: 25%;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Holtwood One SC', serif;
+    animation: color-change .5s infinite;
+    box-shadow: 10px 10px;
+    font-size: 5vw;
+
+
+}
+
+@keyframes color-change {
+    0% {background-color:#005082}
+    25% {background-color: #fa163f}
+    50% {background-color:white}
+    75% {background-color:lime}
+    100% {background-color: #005082}
+}
+
+@keyframes score {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 50px); }
+    to   { transform: translate(0, -0px); }    
+
+}
+
+.comment{
+    position: relative;
+    font-size: 1.5vw;
+    font-family: 'Sigmar One', cursive;
+    bottom: 4vw;
+    left: 25%;
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    .heading{
+         width: 50vw;
+        font-size: 8vw;
+        left: 22%;
+        top: 5vw;
+    }
+
+    .return-btn{
+        top:82%;
+        height: 9vh;
+        width: 50vw;
+        font-size: 7vw;
+        left: 27%;
+    }
+
+    .score{
+        width: 65vw;
+        font-size:15vw;
+        left: 13%;
+        top: 10%;
+    }
+
+    .comment{
+        font-size: 6vw;
+        left: 7%;
+        top: 10%;
+    }
+ 
+}
+
+
+@media only screen and (min-width: 376px) and (max-width: 768px){
+    .heading{
+        width: 60vw;
+        font-size:12vw;
+        top: 5vw;
+        left: 17%
+    }
+
+    .return-btn{
+        top:87%;
+        height: 7vh;
+        width: 40vw;
+        font-size: 7vw;
+        left: 30%;
+    }
+
+        .score{
+        width: 65vw;
+        font-size:10vw;
+        left: 13%;
+        top: 1%;
+    }
+
+    .comment{
+        text-align: center;
+        font-size: 3vw;
+        width: 60vw;
+        left: 23%;
+    }
+}

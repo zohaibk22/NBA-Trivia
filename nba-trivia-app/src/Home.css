@@ -61,6 +61,8 @@
 
 }
 
+/* Animation Idea was referenced from here: https://codepen.io/whusterj/pres/bdYKop */
+
 
 .enter{
     position: absolute;
@@ -87,8 +89,8 @@
 .instructions {
     position: absolute;
     color: white;
-    font-size: 1.3vw;
-    font-family: 'Kavoon', cursive;
+    font-size: 1.6vh;
+    font-family: 'Sigmar One', cursive;
     color: #9dd8c8
 }
 
@@ -137,5 +139,92 @@
     to {transform: rotate(359deg);}
 }
 
-/* Animation Idea was referenced from here: https://codepen.io/whusterj/pres/bdYKop */
 
+@media only screen and (max-width: 375px)
+{
+    .nba-gif{
+        display: none;
+    }
+
+    .app-name{
+        font-size: 9vw;
+        width: 55vw;
+        left: 15%
+
+    }
+    .enter{
+        top: 73%;
+        left: 37%;
+        height: 8vh;
+        width: 30vw;
+        font-size: 5vw;
+    }
+
+    .instructions {
+        width: 70%;
+
+    }
+
+    .instruct-one{
+    top: 20%;
+    left: 25%;
+    }
+
+    .instruct-two{
+        top: 35%;
+        left: 25%;
+    
+    }   
+
+    .instruct-three{
+      top:50%;
+      left:25%;
+    }
+
+    .instruct-four{
+       top:65%;
+      left:25%;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px){
+    .instructions{
+        text-align: center;
+        font-size:2vw;
+        width: 30vw;
+    }
+
+
+    .instruct-one{
+     top: 30%;
+     left: 35%;
+    
+    }
+
+    .instruct-two{
+      top: 50%;
+      left: 1vw;
+    
+    }
+
+    .instruct-three{
+        top:50%;
+        right:1%;
+    }
+
+    .instruct-four{
+       top:65%;
+        left:35%;
+    }
+
+    .enter{
+        left: 35%;
+        height: 8vh;
+        width: 30vw;
+        font-size: 5vw;
+
+    }
+}

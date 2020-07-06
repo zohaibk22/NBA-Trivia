@@ -33,3 +33,47 @@ left: 2vw;
     left: 75vw;
 
 }
+
+@media only screen and (max-width: 375px){
+
+  .api-symbol {
+    position: relative;
+    bottom:6.5vh;
+    left: 75vw;
+    font-size: 3vw;
+    width: 22vw;
+    margin:0px;
+
+  }
+
+  .name-symbol {
+    position: relative;
+    bottom: 8vw;
+    left: 14vw;
+    font-size: 3vw;
+    width: 20vw;
+    margin: 0px;
+  }
+
+
+}
+
+@media only screen and  (min-width: 376px) and (max-width: 768px){
+  .api-symbol {
+    position: relative;
+    bottom:6.5vh;
+    left: 65vw;
+    font-size: 1.5vw;
+    width: 30vw;
+
+  }
+
+  .name-symbol {
+    position: relative;
+    bottom: 5vw;
+    left: 14vw;
+    font-size: 1.5vw;
+    width: 40vw;
+  }
+
+}

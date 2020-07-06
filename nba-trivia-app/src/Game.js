@@ -29,7 +29,7 @@ const Game = (props) => {
       const dataStats = await axios.get(
         `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${randomNum}`
       );
-      console.log(dataStats.data.data[0][props.match.params.myVar]);
+
       setPlayerOneStatsInfo(dataStats.data.data[0][props.match.params.myVar]);
 
       const dataGeneralInfo = await axios.get(
@@ -41,8 +41,6 @@ const Game = (props) => {
 
       setPlayerOneMetrics(playerOneFirstName + " " + playerOneLastName);
 
-      console.log(playerOneFirstName + " " + playerOneLastName);
-
       const gifData = await axios.get(
         `https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=${
           playerOneFirstName + "-" + playerOneLastName
@@ -50,7 +48,6 @@ const Game = (props) => {
       );
 
       setPlayerOneGif(gifData.data.data[0].images.downsized.url);
-      // console.log(gifData.data.data[0].url);
     } catch (error) {
       if (error instanceof TypeError) {
         apiCallStatsPlayerOne();
@@ -69,7 +66,6 @@ const Game = (props) => {
       const data = await axios.get(
         `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${randomNum}`
       );
-      console.log(data.data.data[0][props.match.params.myVar]);
       setPlayerTwoStatsInfo(data.data.data[0][props.match.params.myVar]);
 
       const dataGeneralInfo = await axios.get(
@@ -81,14 +77,11 @@ const Game = (props) => {
 
       setPlayerTwoMetrics(playerTwoFirstName + " " + playerTwoLastName);
 
-      console.log(playerTwoFirstName + " " + playerTwoLastName);
-
       const gifData = await axios.get(
         `https://api.giphy.com/v1/gifs/search?api_key=cLVkasFAvpiN8CTvAkRlGkoBTskbN71s&q=${
           playerTwoFirstName + "-" + playerTwoLastName
         }&limit=1&offset=0&rating=G&lang=en`
       );
-      console.log(gifData.data.data[0]);
 
       setPlayerTwoGif(gifData.data.data[0].images.downsized.url);
     } catch (error) {
@@ -224,11 +217,6 @@ const Game = (props) => {
   }
   return (
     <>
-      {/* <h1> Game Over</h1>
-      <p>
-        <Link to="/Results">See Results</Link>
-      </p> */}
-
       <Results score={score} />
     </>
   );

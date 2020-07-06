@@ -6,12 +6,11 @@ import GameMenu from "./GameMenu";
 import Game from "./Game";
 import Results from "./Results";
 import Footer from "./Footer";
+import "./App.css";
 
 import axios from "axios";
 
 function App() {
-  // //All State Values that will be changed
-
   return (
     <>
       <Header />

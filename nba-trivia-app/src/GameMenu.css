@@ -53,3 +53,34 @@
 a{
     color:lime
 }
+
+@media only screen and (max-width: 375px){
+    .main-menu {
+        width: 60vw;
+        font-size:12vw;
+        top: 5vw;
+        left: 20%
+    }
+
+    .option{
+        width: 60vw;
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+
+    .main-menu {
+        width: 60vw;
+        font-size:10vw;
+        top: 5vw;
+        left: 20%
+    }
+    .option{
+        width: 60vw;
+        font-size: 3.5vw;
+        position: relative;
+        top: 2vw;
+    }
+    
+}

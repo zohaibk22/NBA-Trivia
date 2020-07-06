@@ -4,26 +4,6 @@ import axios from "axios";
 import "./GameMenu.css";
 
 function GameMenu(props) {
-  const [playerOneStatsInfo, setPlayerOneStatsInfo] = useState([]);
-  const [playerTwoStatsInfo, setPlayerTwoStatsInfo] = useState([]);
-  const apiCallStatsPlayerOne = async () => {
-    try {
-      let randomNum = Math.floor(Math.random() * 400 + 1);
-      const dataStats = await axios.get(
-        `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${randomNum}`
-      );
-      console.log(dataStats.data.data[0].pts);
-      setPlayerOneStatsInfo(dataStats.data.data[0].pts);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  // useEffect(() => {
-  //   props.statType();
-  // }, []);
-
-  console.log(props.statType);
   return (
     <div className="body-container">
       <style>

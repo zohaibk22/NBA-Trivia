@@ -21,7 +21,8 @@ header{
 .game-menu {
     position: absolute;
     right: 4vw;
-    top: 1vw
+    top: 1vw;
+    font-size: 2vw;
 }
 
 .option-one {
@@ -29,7 +30,7 @@ header{
     font-family: 'Orbitron', sans-serif;
     margin-right: 10vw;
     text-decoration: none;
-    font-size: 2vw;
+    
     
 }
 .option-one:hover{
@@ -40,7 +41,6 @@ header{
     display: inline-block;
     font-family: 'Orbitron', sans-serif;
     text-decoration: none;
-    font-size: 2vw;
     
 }
 
@@ -55,4 +55,24 @@ header{
 
 a{
     text-decoration: none;
+}
+
+@media only screen and (max-width: 375px){
+    .game-menu {
+        position: absolute;
+        right: 4vw;
+        top: 8vw;
+        font-size: 4vw;
+    }
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px){
+    .game-menu {
+        position: absolute;
+        right: 4vw;
+        top: 3vw;
+        font-size: 4vw;
+    }
+
 }
