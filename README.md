@@ -2,6 +2,8 @@
 
 ## NBA Trivia
 
+Link to website: https://zohaibkhan.netlify.app/
+
 ## Project Description
 
 The "NBA Trivia" application will challenge your knowledge of player stats within the NBA. This will be a trivia game that will allow you to pick between multiple categories of stats within the NBA. After selecting a category, you will then b3 shown two cards of random players. It will then be up to you to select who you believe is the better player according to that specific category of stats. There will be ten round in total. At the end of the game, you will be given a percentage of the questions you answered correctly to portray your knowledge of NBA players with respect to the selected stat line.
